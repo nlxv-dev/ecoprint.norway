@@ -1,0 +1,1404 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EcoPrint Norway – Sustainable Printing</title>
+<meta name="description" content="Premium eco-friendly print studio in Oslo and Bergen. Nordic Swan Ecolabel printing, 100% recycled paper, plant-based inks, and fast delivery with Vipps." />
+<meta property="og:title" content="EcoPrint Norway – Sustainable Printing" />
+<meta property="og:description" content="Premium eco-friendly print studio in Oslo and Bergen. Nordic Swan Ecolabel printing, 100% recycled paper, plant-based inks, and fast delivery with Vipps." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+code
+Code
+<!-- Google Fonts: Inter backup for Apple SF typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          linen: '#FBFBFD',
+          sand: '#F5F5F7',
+          'sand-light': '#FAF9F6',
+          'sand-border': '#E8E8E4',
+          'moss-dark': '#1C2B22',
+          'moss-primary': '#263D30',
+          'moss-accent': '#325442',
+          'moss-light': '#EBF2EE',
+          'moss-subtle': '#F2F7F4',
+          'warm-gray': '#627067'
+        },
+        fontFamily: {
+          sans: [
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"SF Pro Display"',
+            '"SF Pro Text"',
+            'Inter',
+            'system-ui',
+            'sans-serif'
+          ]
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  :root {
+    --bg-linen: #FBFBFD;
+    --nordic-moss: #1C2B22;
+    --soft-sand: #F5F5F7;
+  }
+
+  body {
+    background-color: #FBFBFD;
+    color: #1C2B22;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Subtle tactile paper micro-texture */
+  .bg-paper-texture {
+    background-color: #FBFBFD;
+    background-image: radial-gradient(rgba(28, 43, 34, 0.025) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+
+  /* 2026 Tactile Neumorphic Paper Shadow Styling */
+  .paper-card {
+    background: #ffffff;
+    border: 1px solid rgba(28, 43, 34, 0.06);
+    box-shadow: 
+      0 1px 3px rgba(28, 43, 34, 0.03),
+      0 12px 28px -6px rgba(28, 43, 34, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .paper-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(28, 43, 34, 0.12);
+    box-shadow: 
+      0 4px 8px rgba(28, 43, 34, 0.04),
+      0 20px 36px -8px rgba(28, 43, 34, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  .tactile-btn-primary {
+    background: #1C2B22;
+    color: #FBFBFD;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+      0 2px 4px rgba(28, 43, 34, 0.12),
+      0 8px 18px rgba(28, 43, 34, 0.16),
+      inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .tactile-btn-primary:hover {
+    background: #25392D;
+    transform: translateY(-1px);
+    box-shadow: 
+      0 4px 8px rgba(28, 43, 34, 0.14),
+      0 14px 26px rgba(28, 43, 34, 0.22),
+      inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  }
+
+  .tactile-btn-primary:active {
+    transform: translateY(1px);
+    box-shadow: 
+      0 1px 2px rgba(28, 43, 34, 0.1),
+      inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .tactile-btn-secondary {
+    background: #F5F5F7;
+    color: #1C2B22;
+    border: 1px solid rgba(28, 43, 34, 0.08);
+    box-shadow: 
+      0 1px 3px rgba(28, 43, 34, 0.03),
+      0 6px 14px rgba(28, 43, 34, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .tactile-btn-secondary:hover {
+    background: #ECECEF;
+    border-color: rgba(28, 43, 34, 0.15);
+    transform: translateY(-1px);
+    box-shadow: 
+      0 3px 6px rgba(28, 43, 34, 0.04),
+      0 10px 20px rgba(28, 43, 34, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  .tactile-btn-secondary:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 4px rgba(28, 43, 34, 0.06);
+  }
+
+  .tactile-selector {
+    background: #FBFBFD;
+    border: 1.5px solid rgba(28, 43, 34, 0.08);
+    box-shadow: 
+      0 1px 2px rgba(28, 43, 34, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .tactile-selector:hover {
+    border-color: rgba(28, 43, 34, 0.2);
+    background: #ffffff;
+  }
+
+  .tactile-selector.active {
+    background: #ffffff;
+    border-color: #1C2B22;
+    box-shadow: 
+      0 0 0 2px rgba(28, 43, 34, 0.1),
+      0 4px 12px rgba(28, 43, 34, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 1);
+  }
+
+  .frosted-glass {
+    background: rgba(251, 251, 253, 0.84);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Desktop header: keep navigation on one line after language expansion */
+  @media (min-width: 768px) {
+    header nav a { white-space: nowrap; }
+    header > div { min-width: 0; }
+    header nav { overflow: visible; }
+  }
+
+  /* Custom Range Slider */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #E5E7EB;
+    height: 8px;
+    border-radius: 9999px;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #1C2B22;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(28, 43, 34, 0.25);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #1C2B22;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(28, 43, 34, 0.25);
+    cursor: pointer;
+  }
+</style>
+</head>
+<body class="bg-paper-texture text-[#1C2B22] min-h-screen flex flex-col selection:bg-[#EBF2EE] selection:text-[#1C2B22]">
+code
+Code
+<!-- 1. NAVIGATION -->
+<header class="fixed top-0 inset-x-0 z-50 frosted-glass border-b border-[#1C2B22]/[0.06] transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 min-h-[68px] lg:min-h-[72px] flex items-center gap-4 lg:gap-6">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2.5 group">
+      <div class="w-8 h-8 rounded-full bg-[#1C2B22] flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
+        <svg class="w-4 h-4 text-[#FBFBFD]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 0 1-9-9c0-4.97 4.03-9 9-9 4.14 0 7.64 2.8 8.68 6.64.12.44-.2.86-.65.86H12v10.5Z" />
+        </svg>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-[17px] font-semibold tracking-tight text-[#1C2B22]">EcoPrint</span>
+        <span class="text-[10px] font-medium tracking-widest uppercase text-[#627067] -mt-1">Norway · Nordic Swan Ecolabel</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="hidden md:flex flex-1 items-center justify-center gap-5 lg:gap-6 text-[13px] lg:text-[14px] font-medium text-[#1C2B22]/80 min-w-0">
+      <a href="#tjenester" class="hover:text-[#1C2B22] transition-colors">Services</a>
+      <a href="#kalkulator" class="hover:text-[#1C2B22] transition-colors">Pricing</a>
+      <a href="#miljo" class="hover:text-[#1C2B22] transition-colors whitespace-nowrap">Sustainability</a>
+      <a href="#om-oss" class="hover:text-[#1C2B22] transition-colors">About us</a>
+      <a href="#kontakt" class="hover:text-[#1C2B22] transition-colors">Contact</a>
+    </nav>
+
+    <!-- Right Action Button -->
+    <div class="hidden sm:flex items-center gap-3 lg:gap-4 flex-shrink-0">
+      <div class="hidden lg:flex items-center gap-1.5 text-xs text-[#627067] bg-[#F5F5F7] px-3 py-1.5 rounded-full border border-[#1C2B22]/5">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="whitespace-nowrap">Oslo & Bergen: Open now</span>
+      </div>
+      <button onclick="openUploadModal()" class="tactile-btn-primary whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium tracking-tight flex items-center gap-1.5 cursor-pointer">
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+        </svg>
+        <span>Upload file</span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2 text-[#1C2B22] rounded-lg hover:bg-black/5" aria-label="Menu">
+      <svg id="hamburgerIcon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-b border-[#1C2B22]/10 bg-[#FBFBFD] px-6 py-5 space-y-4">
+    <a href="#tjenester" onclick="toggleMobileMenu()" class="block text-base font-medium text-[#1C2B22]">Services</a>
+    <a href="#kalkulator" onclick="toggleMobileMenu()" class="block text-base font-medium text-[#1C2B22]">Price calculator</a>
+    <a href="#miljo" onclick="toggleMobileMenu()" class="block text-base font-medium text-[#1C2B22]">Nordic Swan Ecolabel & Sustainability</a>
+    <a href="#om-oss" onclick="toggleMobileMenu()" class="block text-base font-medium text-[#1C2B22]">About us</a>
+    <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-base font-medium text-[#1C2B22]">Contact & Locations</a>
+    <div class="pt-3 border-t border-[#1C2B22]/10 flex flex-col gap-3">
+      <button onclick="openUploadModal(); toggleMobileMenu();" class="tactile-btn-primary w-full py-3 rounded-xl text-sm font-medium flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+        </svg>
+        <span>Quick upload (PDF, AI, TIFF)</span>
+      </button>
+      <p class="text-xs text-center text-[#627067]">Studios on Møllergata (Oslo) & Skostredet (Bergen)</p>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow pt-24 md:pt-32">
+  <!-- 2. HERO SECTION -->
+  <section class="max-w-5xl mx-auto px-6 sm:px-8 pt-12 md:pt-20 pb-20 md:pb-28 text-center">
+    <!-- Certification Badge -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF2EE] border border-[#263D30]/15 text-[#263D30] text-xs sm:text-[13px] font-medium tracking-tight mb-8">
+      <svg class="w-4 h-4 text-[#263D30]" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+      </svg>
+      <span>Nordic Swan Ecolabel Printing License #2041 0982 · Climate-neutral production</span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-semibold tracking-[-0.03em] text-[#1C2B22] leading-[1.08] max-w-4xl mx-auto">
+      Sustainable printing.<br>
+      <span class="text-[#325442]">Uncompromising quality.</span>
+    </h1>
+
+    <!-- Sub-headline -->
+    <p class="mt-6 sm:mt-8 text-lg sm:text-xl md:text-[22px] font-normal leading-relaxed text-[#627067] max-w-2xl mx-auto">
+      Made from 100% recycled, high-fiber natural paper with non-toxic, plant-based inks. Crafted with precision and delivered to your door in Oslo, Bergen, and across Norway.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 max-w-md mx-auto">
+      <a href="#kalkulator" class="tactile-btn-primary w-full sm:w-auto px-8 py-3.5 rounded-full text-[15px] font-medium tracking-tight text-center flex items-center justify-center gap-2 cursor-pointer">
+        <span>Choose a product</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </a>
+      <button onclick="openUploadModal()" class="tactile-btn-secondary w-full sm:w-auto px-8 py-3.5 rounded-full text-[15px] font-medium tracking-tight text-center flex items-center justify-center gap-2 cursor-pointer">
+        <svg class="w-4 h-4 text-[#1C2B22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+        </svg>
+        <span>Quick upload</span>
+      </button>
+    </div>
+
+    <!-- Quick Value Props Strip -->
+    <div class="mt-16 pt-10 border-t border-[#1C2B22]/[0.06] grid grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-4xl mx-auto">
+      <div class="flex items-start gap-3">
+        <div class="p-2 rounded-xl bg-[#F5F5F7] text-[#1C2B22] border border-[#1C2B22]/5">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-[#1C2B22]">100% Recycled</p>
+          <p class="text-[11px] text-[#627067]">Hemp, linen, and cotton waste</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="p-2 rounded-xl bg-[#F5F5F7] text-[#1C2B22] border border-[#1C2B22]/5">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.942A4.5 4.5 0 0 1 15.918 17H8.082a4.5 4.5 0 0 1-2.312-.758L4.2 15.3" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-[#1C2B22]">Non-Toxic Plant-Based Inks</p>
+          <p class="text-[11px] text-[#627067]">Soy-based, 0% mineral oils</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="p-2 rounded-xl bg-[#F5F5F7] text-[#1C2B22] border border-[#1C2B22]/5">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-[#1C2B22]">Express delivery</p>
+          <p class="text-[11px] text-[#627067]">Same-day in Oslo & Bergen</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <div class="p-2 rounded-xl bg-[#F5F5F7] text-[#1C2B22] border border-[#1C2B22]/5">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15A2.25 2.25 0 0 0 2.25 6.75v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs font-semibold text-[#1C2B22]">Vipps & EHF</p>
+          <p class="text-[11px] text-[#627067]">Easy payment for individuals & B2B</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BENTO GRID SERVICES -->
+  <section id="tjenester" class="max-w-6xl mx-auto px-6 sm:px-8 py-16 md:py-24">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-[#325442] mb-3">Services & Specialties</h2>
+      <p class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#1C2B22]">
+        Handpicked media for every purpose.
+      </p>
+      <p class="mt-3 text-base text-[#627067]">
+        Whether you are promoting your brand, exhibiting in a gallery, or submitting your master’s thesis.
+      </p>
+    </div>
+
+    <!-- 4-Cell Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Cell 1: Large (Spans 2 columns on medium/large screens) -->
+      <div class="md:col-span-2 paper-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+        <div class="absolute -right-16 -top-16 w-64 h-64 bg-[#EBF2EE] rounded-full blur-3xl pointer-events-none opacity-60"></div>
+        
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F5F5F7] text-xs font-medium text-[#1C2B22] mb-5">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#1C2B22]"></span>
+            <span>B2B Flagship</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-semibold text-[#1C2B22] tracking-tight">
+            B2B & Brand Materials
+          </h3>
+          <p class="mt-2.5 text-base text-[#627067] max-w-xl">
+            Make a lasting, professional impression with sustainable business cards, refined presentation folders, pure bamboo roll-up banners, and cohesive brand brochures.
+          </p>
+
+          <!-- Features List -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div class="flex items-center gap-2.5 text-[#1C2B22]">
+              <div class="w-5 h-5 rounded-full bg-[#EBF2EE] flex items-center justify-center text-[#263D30]">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+              </div>
+              <span>Business cards on 350 g hemp board</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-[#1C2B22]">
+              <div class="w-5 h-5 rounded-full bg-[#EBF2EE] flex items-center justify-center text-[#263D30]">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+              </div>
+              <span>Roll-up banners with 100% recyclable fabric</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-[#1C2B22]">
+              <div class="w-5 h-5 rounded-full bg-[#EBF2EE] flex items-center justify-center text-[#263D30]">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+              </div>
+              <span>Brochures with mineral-free coating</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-[#1C2B22]">
+              <div class="w-5 h-5 rounded-full bg-[#EBF2EE] flex items-center justify-center text-[#263D30]">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+              </div>
+              <span>Seamless EHF invoicing & fixed business agreements</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-[#1C2B22]/[0.06] flex items-center justify-between flex-wrap gap-4">
+          <span class="text-xs text-[#627067]">Minimum order from just 25 pcs · Fast proofing</span>
+          <button onclick="selectProductInCalculator('b2b')" class="tactile-btn-secondary px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-2 cursor-pointer">
+            <span>Configure business package</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cell 2: Medium (Art & Posters) -->
+      <div class="paper-card rounded-3xl p-8 sm:p-9 flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F5F5F7] text-xs font-medium text-[#1C2B22] mb-5">
+            <svg class="w-3.5 h-3.5 text-[#325442]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+            <span>Gallery quality</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#1C2B22] tracking-tight">
+            Art & Posters
+          </h3>
+          <p class="mt-2.5 text-sm text-[#627067] leading-relaxed">
+            Fine Art Giclée prints on unbleached cotton and linen paper. 12-color pigment inks with over 100 years of archival permanence without fading.
+          </p>
+          <ul class="mt-4 space-y-2 text-xs text-[#1C2B22]">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#325442]"></span>
+              <span>Formats from 20×30 cm to 100×140 cm</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#325442]"></span>
+              <span>Velvety matte texture (300 g/m²)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#325442]"></span>
+              <span>Embossed authenticity stamp available</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-6 pt-5 border-t border-[#1C2B22]/[0.06]">
+          <button onclick="selectProductInCalculator('plakat')" class="w-full tactile-btn-secondary py-2.5 rounded-full text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer">
+            <span>Calculate art poster</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cell 3: Medium (Express documents) -->
+      <div class="paper-card rounded-3xl p-8 sm:p-9 flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F5F5F7] text-xs font-medium text-[#1C2B22] mb-5">
+            <svg class="w-3.5 h-3.5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+            </svg>
+            <span>Ready for pickup within an hour</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-semibold text-[#1C2B22] tracking-tight">
+            Express documents
+          </h3>
+          <p class="mt-2.5 text-sm text-[#627067] leading-relaxed">
+            Fast and easy for students, architects, and consultants. Theses, reports, and presentations in A4/A3 with metal-free spiral binding or perfect binding.
+          </p>
+          <ul class="mt-4 space-y-2 text-xs text-[#1C2B22]">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              <span>15% student discount with valid student documentation</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              <span>Ready for pickup within 2 hours</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              <span>Nordic Swan Ecolabel 100 g recycled offset</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-6 pt-5 border-t border-[#1C2B22]/[0.06]">
+          <button onclick="selectProductInCalculator('oppgave')" class="w-full tactile-btn-secondary py-2.5 rounded-full text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer">
+            <span>Calculate report / thesis</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cell 4: Large / Eco Certification (Spans 2 columns on medium/large screens) -->
+      <div id="miljo" class="md:col-span-2 paper-card rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-8 bg-gradient-to-br from-white via-white to-[#F2F7F4] relative overflow-hidden">
+        <div class="max-w-md">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF2EE] text-xs font-semibold text-[#263D30] mb-4">
+            <span>Nordic Swan Ecolabel & Nordic Environmental Standards</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-semibold text-[#1C2B22] tracking-tight">
+            The strictest environmental standard in the Nordic region.
+          </h3>
+          <p class="mt-3 text-sm sm:text-base text-[#627067] leading-relaxed">
+            We guarantee paper from sustainably managed forests or 100% recycled fiber. No carcinogenic solvents, no chlorine bleaching, and printed materials that can be sorted directly with food waste or paper recycling.
+          </p>
+          <div class="mt-5 flex flex-wrap items-center gap-4 text-xs font-medium text-[#1C2B22]">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              0% plastic film (water-based coating)
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Solar-powered printing presses
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              98% reduction in water use
+            </span>
+          </div>
+        </div>
+
+        <!-- Emblem Graphic -->
+        <div class="flex-shrink-0 flex flex-col items-center justify-center p-6 rounded-2xl bg-[#F5F5F7] border border-[#1C2B22]/10 w-44 text-center">
+          <div class="w-16 h-16 rounded-full bg-[#1C2B22] flex items-center justify-center text-white mb-3 shadow-md">
+            <svg class="w-8 h-8 text-[#EBF2EE]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 0 1-9-9c0-4.97 4.03-9 9-9 4.14 0 7.64 2.8 8.68 6.64.12.44-.2.86-.65.86H12v10.5Z" />
+            </svg>
+          </div>
+          <span class="text-xs font-bold text-[#1C2B22]">NORDIC SWAN ECOLABEL</span>
+          <span class="text-[10px] text-[#627067] mt-0.5">License 2041 0982</span>
+          <span class="mt-2 text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-medium">Official Partner</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. ORDER CONFIGURATOR WIDGET (PRISBEREGNER) -->
+  <section id="kalkulator" class="max-w-5xl mx-auto px-6 sm:px-8 py-16 md:py-24">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F5F5F7] text-xs font-semibold text-[#1C2B22] mb-3">
+        <span>Interactive Price Calculator</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#1C2B22]">
+        Calculate your price with full transparency.
+      </h2>
+      <p class="mt-3 text-base text-[#627067]">
+        Choose your material, weight, and quantity. All prices are shown instantly in NOK or EUR with estimated delivery.
+      </p>
+    </div>
+
+    <!-- Main Configurator Card -->
+    <div class="paper-card rounded-3xl p-6 sm:p-10 border border-[#1C2B22]/10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        
+        <!-- Left Controls Column (7 cols) -->
+        <div class="lg:col-span-7 space-y-7">
+          
+          <!-- 1. Product Type -->
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-[#627067] mb-2.5">
+              1. Choose Printed Product
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="productGroup">
+              <button type="button" onclick="setProduct('visittkort')" data-product="visittkort" class="tactile-selector active p-3 rounded-2xl text-left cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">Business Cards</p>
+                <p class="text-[11px] text-[#627067] mt-0.5">85 × 55 mm</p>
+              </button>
+              <button type="button" onclick="setProduct('plakat')" data-product="plakat" class="tactile-selector p-3 rounded-2xl text-left cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">Art Poster</p>
+                <p class="text-[11px] text-[#627067] mt-0.5">A3 / Giclée</p>
+              </button>
+              <button type="button" onclick="setProduct('brosjyre')" data-product="brosjyre" class="tactile-selector p-3 rounded-2xl text-left cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">Brochure</p>
+                <p class="text-[11px] text-[#627067] mt-0.5">A4 4-siders</p>
+              </button>
+              <button type="button" onclick="setProduct('oppgave')" data-product="oppgave" class="tactile-selector p-3 rounded-2xl text-left cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">Report / Thesis</p>
+                <p class="text-[11px] text-[#627067] mt-0.5">A4 spiralbundet</p>
+              </button>
+              <button type="button" onclick="setProduct('rollup')" data-product="rollup" class="tactile-selector p-3 rounded-2xl text-left cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">Bamboo Roll-Up</p>
+                <p class="text-[11px] text-[#627067] mt-0.5">85 × 200 cm</p>
+              </button>
+              <button type="button" onclick="setProduct('popcsort')" data-product="popcsort" class="tactile-selector p-3 rounded-2xl text-left cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">Postcard / Flyer</p>
+                <p class="text-[11px] text-[#627067] mt-0.5">A6 tosidig</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Paper Texture -->
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-[#627067] mb-2.5">
+              2. Paper Texture & Fiber Source
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="paperGroup">
+              <button type="button" onclick="setPaper('hamp')" data-paper="hamp" class="tactile-selector active p-3 rounded-2xl text-left cursor-pointer">
+                <div class="flex items-center justify-between">
+                  <p class="text-xs font-semibold text-[#1C2B22]">Hemp fiber</p>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-[#EBF2EE] text-[#263D30] font-medium">Popular</span>
+                </div>
+                <p class="text-[11px] text-[#627067] mt-1">Coarse, tactile, and extremely durable</p>
+              </button>
+
+              <button type="button" onclick="setPaper('lin')" data-paper="lin" class="tactile-selector p-3 rounded-2xl text-left cursor-pointer">
+                <div class="flex items-center justify-between">
+                  <p class="text-xs font-semibold text-[#1C2B22]">Pure linen</p>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 font-medium">Premium</span>
+                </div>
+                <p class="text-[11px] text-[#627067] mt-1">Finely woven with a subtle surface texture</p>
+              </button>
+
+              <button type="button" onclick="setPaper('resirkulert')" data-paper="resirkulert" class="tactile-selector p-3 rounded-2xl text-left cursor-pointer">
+                <div class="flex items-center justify-between">
+                  <p class="text-xs font-semibold text-[#1C2B22]">100% Recycled</p>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 font-medium">Classic</span>
+                </div>
+                <p class="text-[11px] text-[#627067] mt-1">Unbleached, wood-free recycled paper</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Weight (GSM) -->
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-[#627067] mb-2.5">
+              3. Weight & Thickness (GSM)
+            </label>
+            <div class="grid grid-cols-4 sm:grid-cols-4 gap-2" id="gsmGroup">
+              <button type="button" onclick="setGsm(160)" data-gsm="160" class="tactile-selector p-2.5 rounded-xl text-center cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">160 g/m²</p>
+                <p class="text-[10px] text-[#627067]">Light / Brochure</p>
+              </button>
+              <button type="button" onclick="setGsm(250)" data-gsm="250" class="tactile-selector p-2.5 rounded-xl text-center cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">250 g/m²</p>
+                <p class="text-[10px] text-[#627067]">Medium stiffness</p>
+              </button>
+              <button type="button" onclick="setGsm(300)" data-gsm="300" class="tactile-selector active p-2.5 rounded-xl text-center cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">300 g/m²</p>
+                <p class="text-[10px] text-[#627067]">Recommended</p>
+              </button>
+              <button type="button" onclick="setGsm(350)" data-gsm="350" class="tactile-selector p-2.5 rounded-xl text-center cursor-pointer">
+                <p class="text-xs font-semibold text-[#1C2B22]">350 g/m²</p>
+                <p class="text-[10px] text-[#627067]">Heavy board</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- 4. Print Run / Quantity -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs font-semibold uppercase tracking-wider text-[#627067]">
+                4. Number of Copies (Print Run)
+              </label>
+              <div class="flex items-center gap-2">
+                <span id="quantityBadge" class="text-xs font-bold px-2.5 py-0.5 rounded-md bg-[#1C2B22] text-white">
+                  100 pcs
+                </span>
+                <span id="discountTag" class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                  -20% volume discount
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <input type="range" id="quantitySlider" min="10" max="1500" step="10" value="100" class="w-full cursor-pointer" oninput="onQuantityChange(this.value)">
+            </div>
+
+            <!-- Quick Presets -->
+            <div class="flex items-center justify-between mt-3 text-xs text-[#627067]">
+              <button type="button" onclick="setQuantity(25)" class="px-2 py-1 rounded hover:bg-black/5 cursor-pointer">25</button>
+              <button type="button" onclick="setQuantity(50)" class="px-2 py-1 rounded hover:bg-black/5 cursor-pointer">50</button>
+              <button type="button" onclick="setQuantity(100)" class="px-2 py-1 rounded bg-[#F5F5F7] font-semibold text-[#1C2B22] cursor-pointer">100</button>
+              <button type="button" onclick="setQuantity(250)" class="px-2 py-1 rounded hover:bg-black/5 cursor-pointer">250</button>
+              <button type="button" onclick="setQuantity(500)" class="px-2 py-1 rounded hover:bg-black/5 cursor-pointer">500</button>
+              <button type="button" onclick="setQuantity(1000)" class="px-2 py-1 rounded hover:bg-black/5 cursor-pointer">1000</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Calculation & Checkout Panel (5 cols) -->
+        <div class="lg:col-span-5 bg-[#F5F5F7] rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-[#1C2B22]/[0.06] shadow-sm">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-[#1C2B22]/10">
+              <span class="text-xs font-semibold uppercase tracking-wider text-[#627067]">Your Selection</span>
+              <span class="text-xs font-medium text-emerald-800 bg-[#EBF2EE] px-2 py-0.5 rounded-full">Nordic Swan Ecolabel</span>
+            </div>
+
+            <!-- Summary Spec details -->
+            <div class="mt-4 space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-[#627067]">Product:</span>
+                <span id="summaryProduct" class="font-semibold text-[#1C2B22]">Business Cards</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#627067]">Paper:</span>
+                <span id="summaryPaper" class="font-semibold text-[#1C2B22]">Hemp fiber</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#627067]">Weight:</span>
+                <span id="summaryGsm" class="font-semibold text-[#1C2B22]">300 g/m²</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#627067]">Quantity:</span>
+                <span id="summaryQuantity" class="font-semibold text-[#1C2B22]">100 copies</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#627067]">Unit price:</span>
+                <span id="summaryUnitPrice" class="font-semibold text-[#1C2B22]">NOK 3.92 / pcs</span>
+              </div>
+            </div>
+
+            <!-- Price Breakdown Table -->
+            <div class="mt-6 pt-5 border-t border-[#1C2B22]/10 space-y-2 text-xs">
+              <div class="flex justify-between text-[#627067]">
+                <span>Net price excl. VAT:</span>
+                <span id="calcSubtotal">NOK 392</span>
+              </div>
+              <div class="flex justify-between text-[#627067]">
+                <span>VAT (25%):</span>
+                <span id="calcTax">NOK 98</span>
+              </div>
+              <div class="flex justify-between text-[#627067]">
+                <span>Carbon offset:</span>
+                <span id="calcCarbonOffset" class="text-emerald-700 font-medium">NOK 0 (Included)</span>
+              </div>
+            </div>
+
+            <!-- Total Big Price Display -->
+            <div class="mt-6 pt-5 border-t border-[#1C2B22]/15">
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-xs uppercase tracking-wider font-semibold text-[#627067]">Total price:</span>
+                <!-- Currency segmented toggle -->
+                <div class="inline-flex items-center gap-1 p-1 rounded-xl bg-[#F5F5F7] border border-[#1C2B22]/[0.08] shadow-sm" role="group" aria-label="Currency">
+                  <button type="button" id="currencyNOK" onclick="setCurrency('NOK')" class="tactile-selector active px-3 py-1.5 rounded-lg text-[11px] font-semibold cursor-pointer" aria-pressed="true">NOK</button>
+                  <button type="button" id="currencyEUR" onclick="setCurrency('EUR')" class="tactile-selector px-3 py-1.5 rounded-lg text-[11px] font-semibold cursor-pointer" aria-pressed="false">EUR</button>
+                </div>
+              </div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span id="calcTotal" class="text-3xl sm:text-4xl font-bold tracking-tight text-[#1C2B22]">NOK 490</span>
+                <span class="text-xs font-normal text-[#627067]">incl. VAT</span>
+              </div>
+              <p class="text-[11px] text-[#627067] mt-1 flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                <span>Estimated ready: <strong id="calcDeliveryTime" class="font-semibold text-[#1C2B22]">Tomorrow at 14:00</strong></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-8 space-y-3">
+            <button type="button" onclick="startOrderFlow('vipps')" class="w-full tactile-btn-primary py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md">
+              <!-- Vipps orange icon / brand indication -->
+              <span class="w-4 h-4 rounded-full bg-[#FF5B24] inline-flex items-center justify-center text-white text-[9px] font-black">v</span>
+              <span>Pay with Vipps (<span id="vippsCurrencyLabel">NOK </span><span id="vippsBtnAmount">490</span>)</span>
+            </button>
+
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" onclick="startOrderFlow('kort')" class="tactile-btn-secondary py-2.5 rounded-xl text-xs font-medium text-center cursor-pointer">
+                Kort / Klarna
+              </button>
+              <button type="button" onclick="startOrderFlow('ehf')" class="tactile-btn-secondary py-2.5 rounded-xl text-xs font-medium text-center cursor-pointer">
+                EHF Invoice (B2B)
+              </button>
+            </div>
+
+            <p class="text-[10px] text-center text-[#627067]">
+              Free upload & free file validation before production.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ABOUT US & LOCAL PRODUCTION IN NORWAY -->
+  <section id="om-oss" class="max-w-6xl mx-auto px-6 sm:px-8 py-16 md:py-24 border-t border-[#1C2B22]/[0.06]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF2EE] text-xs font-semibold text-[#263D30] mb-4">
+          <span>Craftsmanship & Nordic Roots</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-[#1C2B22] leading-tight">
+          Built for the future. Printed locally in Oslo and Bergen.
+        </h2>
+        <p class="mt-4 text-base text-[#627067] leading-relaxed">
+          EcoPrint was founded with one clear vision: to prove that eco-friendly printing can outperform traditional industry in both aesthetic finish and durability. We combine modern Swiss printing presses with Nordic natural fibers.
+        </p>
+        <p class="mt-3 text-base text-[#627067] leading-relaxed">
+          By producing locally, we minimize shipping distances, reduce emissions, and give you personal guidance from skilled printers with a passion for paper.
+        </p>
+
+        <div class="mt-8 grid grid-cols-2 gap-6 pt-6 border-t border-[#1C2B22]/10">
+          <div>
+            <p class="text-2xl sm:text-3xl font-bold text-[#1C2B22]">98.4%</p>
+            <p class="text-xs text-[#627067] mt-1">Lower CO₂ footprint than conventional offset</p>
+          </div>
+          <div>
+            <p class="text-2xl sm:text-3xl font-bold text-[#1C2B22]">14 200+</p>
+            <p class="text-xs text-[#627067] mt-1">Completed projects for Norwegian businesses and artists</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Locations Card with Oslo & Bergen -->
+      <div class="space-y-4">
+        <!-- Oslo Studio -->
+        <div class="paper-card rounded-2xl p-6 border border-[#1C2B22]/10">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-lg font-semibold text-[#1C2B22]">Oslo Print Studio</h3>
+                <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#EBF2EE] text-[#263D30]">Head Office</span>
+              </div>
+              <p class="text-xs text-[#627067] mt-1">Møllergata 12, 0179 Oslo (Torggata quarter)</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-[#F5F5F7] flex items-center justify-center text-[#1C2B22]">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#1C2B22]/5 flex items-center justify-between text-xs text-[#627067]">
+            <span>Mon–Fri: 08:00 – 17:00</span>
+            <span>Tel: 22 14 00 10</span>
+          </div>
+        </div>
+
+        <!-- Bergen Studio -->
+        <div class="paper-card rounded-2xl p-6 border border-[#1C2B22]/10">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-lg font-semibold text-[#1C2B22]">Bergen Art & Atelier</h3>
+                <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-[#F5F5F7] text-[#1C2B22]">Gallery Printing</span>
+              </div>
+              <p class="text-xs text-[#627067] mt-1">Skostredet 16, 5017 Bergen</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-[#F5F5F7] flex items-center justify-center text-[#1C2B22]">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#1C2B22]/5 flex items-center justify-between text-xs text-[#627067]">
+            <span>Mon–Fri: 09:00 – 16:30</span>
+            <span>Tel: 55 21 00 20</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CLIENT TESTIMONIALS & TRUST -->
+  <section class="max-w-5xl mx-auto px-6 sm:px-8 py-16 border-t border-[#1C2B22]/[0.06]">
+    <div class="text-center mb-10">
+      <p class="text-xs font-semibold uppercase tracking-widest text-[#325442] mb-2">Trusted by designers & brands</p>
+      <p class="text-2xl font-semibold text-[#1C2B22]">What our clients say</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="paper-card rounded-2xl p-6 text-sm">
+        <div class="flex items-center gap-1 text-amber-500 mb-3">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="text-[#1C2B22] italic">
+          “The hemp business cards have a texture that immediately stands out in client meetings. Being Nordic Swan Ecolabelled perfectly matches our architecture studio’s values.”
+        </p>
+        <div class="mt-4 pt-3 border-t border-[#1C2B22]/5">
+          <p class="font-semibold text-xs text-[#1C2B22]">Sigrid Amundsen</p>
+          <p class="text-[11px] text-[#627067]">Senior Architect, Snøhetta partner alum</p>
+        </div>
+      </div>
+
+      <div class="paper-card rounded-2xl p-6 text-sm">
+        <div class="flex items-center gap-1 text-amber-500 mb-3">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="text-[#1C2B22] italic">
+          “The Giclée prints on linen paper reproduce my watercolor colors with a depth I have never experienced at conventional commercial printers.”
+        </p>
+        <div class="mt-4 pt-3 border-t border-[#1C2B22]/5">
+          <p class="font-semibold text-xs text-[#1C2B22]">Eirik V. Hauge</p>
+          <p class="text-[11px] text-[#627067]">Visual Artist, Bergen Kunsthall</p>
+        </div>
+      </div>
+
+      <div class="paper-card rounded-2xl p-6 text-sm">
+        <div class="flex items-center gap-1 text-amber-500 mb-3">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="text-[#1C2B22] italic">
+          “We ordered 800 annual reports on 100% recycled, wood-free paper with EHF invoicing. Delivered to our door in Oslo the next day, with flawless binding.”
+        </p>
+        <div class="mt-4 pt-3 border-t border-[#1C2B22]/5">
+          <p class="font-semibold text-xs text-[#1C2B22]">Karoline Lindqvist</p>
+          <p class="text-[11px] text-[#627067]">Sustainability Manager, Nordic CleanTech</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 5. FOOTER -->
+<footer id="kontakt" class="bg-[#F5F5F7] border-t border-[#1C2B22]/10 pt-16 pb-12 text-[#1C2B22]">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#1C2B22]/10">
+      
+      <!-- Col 1: Brand & Sustainability -->
+      <div class="space-y-3">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-[#1C2B22] flex items-center justify-center text-white">
+            <svg class="w-3.5 h-3.5 text-[#FBFBFD]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 0 1-9-9c0-4.97 4.03-9 9-9 4.14 0 7.64 2.8 8.68 6.64.12.44-.2.86-.65.86H12v10.5Z" />
+            </svg>
+          </div>
+          <span class="font-semibold text-base">EcoPrint Norway AS</span>
+        </div>
+        <p class="text-xs text-[#627067] leading-relaxed">
+          Norway’s leading Nordic Swan Ecolabelled print studio for sustainable businesses, artists, and conscious designers.
+        </p>
+        <div class="pt-2 text-xs font-medium text-[#263D30]">
+          <p>Company reg. no.: 928 341 512 VAT</p>
+          <p>Nordic Swan Ecolabel License: #2041 0982</p>
+        </div>
+      </div>
+
+      <!-- Col 2: Locations -->
+      <div class="space-y-2 text-xs">
+        <h4 class="font-semibold text-sm text-[#1C2B22] mb-3">Studios</h4>
+        <div class="space-y-1">
+          <p class="font-medium text-[#1C2B22]">Oslo Print Studio</p>
+          <p class="text-[#627067]">Møllergata 12, 0179 Oslo</p>
+          <p class="text-[#627067]">Mon–Fri: 08:00 – 17:00</p>
+        </div>
+        <div class="pt-3 space-y-1">
+          <p class="font-medium text-[#1C2B22]">Bergen Art Printing</p>
+          <p class="text-[#627067]">Skostredet 16, 5017 Bergen</p>
+          <p class="text-[#627067]">Mon–Fri: 09:00 – 16:30</p>
+        </div>
+      </div>
+
+      <!-- Col 3: Shipping & Logistics -->
+      <div class="space-y-2 text-xs">
+        <h4 class="font-semibold text-sm text-[#1C2B22] mb-3">Shipping & Logistics</h4>
+        <p class="text-[#627067] leading-relaxed">
+          We ship with <strong>Posten & Bring</strong> climate-neutral service parcels and overnight courier delivery across the country.
+        </p>
+        <div class="flex items-center gap-2 pt-2">
+          <span class="px-2 py-1 rounded bg-white text-[#1C2B22] font-semibold text-[11px] border border-black/5">Posten</span>
+          <span class="px-2 py-1 rounded bg-white text-[#1C2B22] font-semibold text-[11px] border border-black/5">Bring</span>
+          <span class="px-2 py-1 rounded bg-white text-[#1C2B22] font-semibold text-[11px] border border-black/5">Local Bicycle Courier</span>
+        </div>
+        <p class="text-[11px] text-[#627067] pt-1">
+          Pickup at our studios is always free.
+        </p>
+      </div>
+
+      <!-- Col 4: Secure Payment -->
+      <div class="space-y-3 text-xs">
+        <h4 class="font-semibold text-sm text-[#1C2B22] mb-3">Secure Payment</h4>
+        <p class="text-[#627067]">
+          We support all major Norwegian payment methods with instant order confirmation.
+        </p>
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <!-- Vipps Badge -->
+          <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-black/5 text-[#1C2B22]">
+            <span class="w-3.5 h-3.5 rounded-full bg-[#FF5B24] inline-flex items-center justify-center text-white text-[8px] font-black">v</span>
+            <span class="font-semibold text-[11px]">Vipps</span>
+          </div>
+          <!-- Klarna Badge -->
+          <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-black/5 text-[#1C2B22]">
+            <span class="font-bold text-[11px] text-[#FFB3C7] bg-black px-1 rounded">K.</span>
+            <span class="font-semibold text-[11px]">Klarna</span>
+          </div>
+          <!-- EHF Invoice -->
+          <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-black/5 text-[#1C2B22]">
+            <svg class="w-3.5 h-3.5 text-blue-700" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
+            <span class="font-semibold text-[11px]">EHF Invoice</span>
+          </div>
+          <!-- Visa/Mastercard -->
+          <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-black/5 text-[#1C2B22]">
+            <span class="font-semibold text-[11px]">Cards & Bank</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#627067] gap-4">
+      <p>© 2026 EcoPrint Norway AS. All rights reserved. Printed with care and conscience.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-[#1C2B22] transition-colors">Terms & Conditions</a>
+        <a href="#" class="hover:text-[#1C2B22] transition-colors">Privacy (GDPR)</a>
+        <a href="#" class="hover:text-[#1C2B22] transition-colors">Sustainability Report 2026</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- INTERACTIVE FILE UPLOAD MODAL -->
+<div id="uploadModal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="paper-card rounded-3xl max-w-lg w-full p-6 sm:p-8 relative bg-white border border-[#1C2B22]/15 shadow-2xl">
+    <button onclick="closeUploadModal()" class="absolute top-5 right-5 p-2 rounded-full hover:bg-black/5 text-[#627067] cursor-pointer" aria-label="Close">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
+
+    <div class="flex items-center gap-2.5 mb-2">
+      <div class="w-8 h-8 rounded-full bg-[#EBF2EE] text-[#263D30] flex items-center justify-center">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" /></svg>
+      </div>
+      <h3 class="text-xl font-semibold text-[#1C2B22]">Quick upload</h3>
+    </div>
+    <p class="text-xs text-[#627067] mb-6">
+      Drop in your print file. Our automated preflight checks color space (CMYK), bleed (3 mm), and 300 DPI resolution.
+    </p>
+
+    <!-- Dropzone -->
+    <div id="dropZone" onclick="document.getElementById('fileInput').click()" class="border-2 border-dashed border-[#1C2B22]/20 hover:border-[#1C2B22] rounded-2xl p-8 text-center cursor-pointer transition-colors bg-[#FBFBFD] hover:bg-[#F5F5F7]">
+      <input type="file" id="fileInput" class="hidden" accept=".pdf,.ai,.eps,.tiff,.psd,.jpg,.png" onchange="handleFileSelect(event)">
+      <div class="w-12 h-12 rounded-full bg-[#F5F5F7] flex items-center justify-center mx-auto text-[#1C2B22] mb-3">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m6.75 12-3-3m0 0-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+      </div>
+      <p class="text-sm font-semibold text-[#1C2B22]">Drop your file here or click to choose</p>
+      <p class="text-xs text-[#627067] mt-1">Supports PDF/X-4, AI, TIFF, EPS (Max 250 MB)</p>
+    </div>
+
+    <!-- File status indicator -->
+    <div id="fileStatusContainer" class="hidden mt-4 p-3 rounded-xl bg-[#EBF2EE] border border-[#263D30]/20 text-xs">
+      <div class="flex items-center justify-between font-medium text-[#263D30]">
+        <span id="fileNameDisplay" class="truncate max-w-[220px]">design_final.pdf</span>
+        <span class="text-emerald-700 font-bold">✓ Approved for printing (300 DPI)</span>
+      </div>
+    </div>
+
+    <div class="mt-6 flex items-center justify-end gap-3">
+      <button type="button" onclick="closeUploadModal()" class="tactile-btn-secondary px-5 py-2.5 rounded-full text-xs font-semibold">
+        Cancel
+      </button>
+      <button type="button" onclick="confirmUploadProceed()" class="tactile-btn-primary px-6 py-2.5 rounded-full text-xs font-semibold">
+        Continue to configuration
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER SUCCESS & VIPPS MODAL -->
+<div id="orderSuccessModal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="paper-card rounded-3xl max-w-md w-full p-6 sm:p-8 text-center bg-white border border-[#1C2B22]/15 shadow-2xl">
+    <div class="w-14 h-14 rounded-full bg-[#EBF2EE] text-[#263D30] flex items-center justify-center mx-auto mb-4">
+      <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+    </div>
+    <h3 class="text-xl font-bold text-[#1C2B22]">Order Registered!</h3>
+    <p class="text-xs text-[#627067] mt-1.5" id="orderMethodNote">
+      A payment request has been sent to your Vipps app.
+    </p>
+
+    <div class="mt-5 p-4 rounded-2xl bg-[#F5F5F7] border border-[#1C2B22]/5 text-left text-xs space-y-1.5">
+      <div class="flex justify-between">
+        <span class="text-[#627067]">Order number:</span>
+        <span id="orderNumberDisplay" class="font-mono font-bold text-[#1C2B22]">ECO-84920</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-[#627067]">Amount:</span>
+        <span id="orderAmountDisplay" class="font-bold text-[#1C2B22]">NOK 490 incl. VAT</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-[#627067]">Selected print:</span>
+        <span id="orderConfigDisplay" class="text-[#1C2B22]">Business Cards · Hamp · 100 pcs</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-[#627067]">Production:</span>
+        <span class="text-emerald-700 font-semibold">Oslo Print Studio</span>
+      </div>
+    </div>
+
+    <button onclick="closeOrderModal()" class="mt-6 w-full tactile-btn-primary py-3 rounded-full text-xs font-semibold">
+      Done / Back to homepage
+    </button>
+  </div>
+</div>
+
+<!-- VANILLA JAVASCRIPT ORDER CALCULATOR LOGIC -->
+<script>
+  // Product Catalog Configuration
+  const PRODUCTS = {
+    visittkort: { name: 'Business Cards', baseUnitPrice: 3.20, minQty: 25 },
+    plakat:     { name: 'Art Poster (A3)', baseUnitPrice: 18.50, minQty: 5 },
+    brosjyre:   { name: 'Brochure A4 falset', baseUnitPrice: 12.00, minQty: 20 },
+    oppgave:    { name: 'Report / Thesis A4', baseUnitPrice: 8.50, minQty: 1 },
+    rollup:     { name: 'Bamboo Roll-Up (85x200)', baseUnitPrice: 690.00, minQty: 1 },
+    popcsort:   { name: 'Popcsort A6', baseUnitPrice: 2.80, minQty: 25 }
+  };
+
+  const PAPERS = {
+    hamp:        { name: 'Hemp fiber (Grov taktil)', multiplier: 1.15 },
+    lin:         { name: 'Pure linen (Fint vevet)', multiplier: 1.25 },
+    resirkulert: { name: '100% Recycled trefritt', multiplier: 1.00 }
+  };
+
+  const GSM_MULTIPLIERS = {
+    160: 0.95,
+    250: 1.05,
+    300: 1.15,
+    350: 1.30
+  };
+
+  // State
+  let currentProduct = 'visittkort';
+  let currentPaper = 'hamp';
+  let currentGsm = 300;
+  let currentQuantity = 100;
+  let currentCurrency = 'NOK';
+  let uploadedFileName = '';
+
+  // Static NOK → EUR reference rate. Update this value when you want to refresh the displayed FX rate.
+  // Current reference: 1 NOK ≈ 0.09343 EUR.
+  const nokToEurRate = 0.09343;
+
+  function formatMoney(nokAmount, currency = currentCurrency, options = {}) {
+    const converted = currency === 'EUR' ? nokAmount * nokToEurRate : nokAmount;
+    const maximumFractionDigits = options.maximumFractionDigits ?? (currency === 'EUR' ? 2 : 0);
+    const minimumFractionDigits = options.minimumFractionDigits ?? maximumFractionDigits;
+    const locale = currency === 'EUR' ? 'en-IE' : 'en-GB';
+    const symbol = currency === 'EUR' ? '€' : 'NOK ';
+
+    return symbol + converted.toLocaleString(locale, {
+      minimumFractionDigits,
+      maximumFractionDigits
+    });
+  }
+
+  function setCurrency(currency) {
+    currentCurrency = currency === 'EUR' ? 'EUR' : 'NOK';
+
+    const nokButton = document.getElementById('currencyNOK');
+    const eurButton = document.getElementById('currencyEUR');
+
+    nokButton.classList.toggle('active', currentCurrency === 'NOK');
+    eurButton.classList.toggle('active', currentCurrency === 'EUR');
+    nokButton.setAttribute('aria-pressed', currentCurrency === 'NOK' ? 'true' : 'false');
+    eurButton.setAttribute('aria-pressed', currentCurrency === 'EUR' ? 'true' : 'false');
+
+    calculatePrice();
+  }
+
+  // Calculator logic
+  function calculatePrice() {
+    const prod = PRODUCTS[currentProduct];
+    const paper = PAPERS[currentPaper];
+    const gsmMult = GSM_MULTIPLIERS[currentGsm] || 1.0;
+
+    // Base unit price adjusted by paper and weight
+    let adjustedUnitPrice = prod.baseUnitPrice * paper.multiplier * gsmMult;
+
+    // Volume Discount curves
+    let discountRate = 0;
+    if (currentQuantity >= 1000) discountRate = 0.45;
+    else if (currentQuantity >= 500) discountRate = 0.35;
+    else if (currentQuantity >= 250) discountRate = 0.28;
+    else if (currentQuantity >= 100) discountRate = 0.20;
+    else if (currentQuantity >= 50) discountRate = 0.10;
+
+    const effectiveUnitPrice = adjustedUnitPrice * (1 - discountRate);
+    const subtotal = Math.round(effectiveUnitPrice * currentQuantity);
+    const tax = Math.round(subtotal * 0.25);
+    const total = subtotal + tax;
+
+    // Update DOM
+    document.getElementById('summaryProduct').innerText = prod.name;
+    document.getElementById('summaryPaper').innerText = paper.name;
+    document.getElementById('summaryGsm').innerText = currentGsm + ' g/m²';
+    document.getElementById('summaryQuantity').innerText = currentQuantity + ' copies';
+    document.getElementById('summaryUnitPrice').innerText = formatMoney(effectiveUnitPrice, currentCurrency, { maximumFractionDigits: 2, minimumFractionDigits: 2 }) + ' / pcs';
+
+    document.getElementById('quantityBadge').innerText = currentQuantity + ' pcs';
+    
+    const discountTag = document.getElementById('discountTag');
+    if (discountRate > 0) {
+      discountTag.innerText = `-${Math.round(discountRate * 100)}% volume discount`;
+      discountTag.style.display = 'inline-block';
+    } else {
+      discountTag.innerText = 'Standard price';
+      discountTag.style.display = 'inline-block';
+    }
+
+    document.getElementById('calcSubtotal').innerText = formatMoney(subtotal);
+    document.getElementById('calcTax').innerText = formatMoney(tax);
+    document.getElementById('calcCarbonOffset').innerText = `${formatMoney(0)} (Included)`;
+    document.getElementById('calcTotal').innerText = formatMoney(total);
+    document.getElementById('vippsBtnAmount').innerText = currentCurrency === 'EUR'
+      ? (total * nokToEurRate).toLocaleString('en-IE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+      : total.toLocaleString('en-GB');
+
+    const vippsCurrencyLabel = document.getElementById('vippsCurrencyLabel');
+    if (vippsCurrencyLabel) {
+      vippsCurrencyLabel.innerText = currentCurrency === 'EUR' ? '€' : 'NOK ';
+    }
+
+    // Estimate delivery calculation
+    const now = new Date();
+    const tomorrow = new Date(now);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const estDay = dayNames[tomorrow.getDay()];
+    document.getElementById('calcDeliveryTime').innerText = currentQuantity > 500 ? 'Within 48h' : `${estDay} at 14:00`;
+  }
+
+  // Event handlers
+  function setProduct(productKey) {
+    currentProduct = productKey;
+    document.querySelectorAll('#productGroup button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-product') === productKey);
+    });
+    calculatePrice();
+  }
+
+  function setPaper(paperKey) {
+    currentPaper = paperKey;
+    document.querySelectorAll('#paperGroup button').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-paper') === paperKey);
+    });
+    calculatePrice();
+  }
+
+  function setGsm(gsmVal) {
+    currentGsm = gsmVal;
+    document.querySelectorAll('#gsmGroup button').forEach(btn => {
+      btn.classList.toggle('active', Number(btn.getAttribute('data-gsm')) === gsmVal);
+    });
+    calculatePrice();
+  }
+
+  function onQuantityChange(val) {
+    currentQuantity = parseInt(val, 10);
+    calculatePrice();
+  }
+
+  function setQuantity(val) {
+    currentQuantity = val;
+    document.getElementById('quantitySlider').value = val;
+    calculatePrice();
+  }
+
+  function selectProductInCalculator(prodKey) {
+    setProduct(prodKey);
+    const el = document.getElementById('kalkulator');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Mobile Menu Toggle
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const hamburger = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const isHidden = menu.classList.contains('hidden');
+    if (isHidden) {
+      menu.classList.remove('hidden');
+      hamburger.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+      hamburger.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    }
+  }
+
+  // Upload Modal
+  function openUploadModal() {
+    const modal = document.getElementById('uploadModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeUploadModal() {
+    const modal = document.getElementById('uploadModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function handleFileSelect(event) {
+    const file = event.target.files[0];
+    if (file) {
+      uploadedFileName = file.name;
+      const container = document.getElementById('fileStatusContainer');
+      const display = document.getElementById('fileNameDisplay');
+      display.innerText = file.name + ' (' + (file.size / (1024 * 1024)).toFixed(1) + ' MB)';
+      container.classList.remove('hidden');
+    }
+  }
+
+  function confirmUploadProceed() {
+    closeUploadModal();
+    const el = document.getElementById('kalkulator');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Order flow simulator
+  function startOrderFlow(method) {
+    const orderNum = 'ECO-' + Math.floor(10000 + Math.random() * 90000);
+    document.getElementById('orderNumberDisplay').innerText = orderNum;
+    
+    const totalText = document.getElementById('calcTotal').innerText;
+    document.getElementById('orderAmountDisplay').innerText = totalText + ' incl. VAT';
+    
+    const prodName = PRODUCTS[currentProduct].name;
+    const paperName = PAPERS[currentPaper].name.split(' ')[0];
+    document.getElementById('orderConfigDisplay').innerText = `${prodName} · ${paperName} · ${currentQuantity} pcs`;
+
+    const note = document.getElementById('orderMethodNote');
+    if (method === 'vipps') {
+      note.innerText = 'A payment request will be sent to your Vipps app. Approve it on your phone for immediate production.';
+    } else if (method === 'ehf') {
+      note.innerText = 'The order is placed for a business. An EHF invoice will be sent via Peppol to the provided company registration number.';
+    } else {
+      note.innerText = 'Redirecting to secure card payment via Klarna / Stripe...';
+    }
+
+    const modal = document.getElementById('orderSuccessModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeOrderModal() {
+    const modal = document.getElementById('orderSuccessModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Initialize calculation on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    calculatePrice();
+
+    // Drag & Drop support
+    const dropZone = document.getElementById('dropZone');
+    if (dropZone) {
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.add('border-[#1C2B22]', 'bg-[#F2F7F4]');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('border-[#1C2B22]', 'bg-[#F2F7F4]');
+        }, false);
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        if (files && files.length > 0) {
+          handleFileSelect({ target: { files: files } });
+        }
+      }, false);
+    }
+  });
+</script>
+</body>
+</html>
